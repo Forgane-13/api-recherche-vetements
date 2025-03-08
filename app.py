@@ -27,7 +27,7 @@ def filter_valid_links(results):
         for item in results['items']:
             link = item['link']
             if any(site in link for site in valid_sites):
-                if (".html" in link or "/prd/" in link or "/dp/" in link or "p0000" in link or "productpage" in link):
+                if (".html" in link or "/prd/" in link or "/dp/" in link or "p0000" in link or "productpage" in link or "product" in link or "products" in link):
                     product_links.append(link)
                 else:
                     search_links.append(link)
